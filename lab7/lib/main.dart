@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:lab7/Data/Data.dart';
 import 'package:lab7/pages/home.dart';
 
 Color cbl = Color(0xff282626);
 Color cwh = Color(0xffFFFFFF);
 
 void main() {
+  print(data.length);
   runApp(const MyApp());
 }
 
