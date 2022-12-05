@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lab7/HomeScreen.dart';
 import 'package:lab7/components/imagelist.dart';
+import 'package:lab7/components/uploadedimages.dart';
 import 'package:lab7/main.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -15,7 +16,7 @@ class Upload extends StatefulWidget {
 class _UploadState extends State<Upload> {
   final ImagePicker _picker = ImagePicker();
 
-  XFile? image;
+  static XFile? image;
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +77,12 @@ class _UploadState extends State<Upload> {
               ),
               onPressed: () {
                 setState(() {
-                  imageList.add(image!.path);
+                  upImages.add(image!.path);
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => HomeScreen()),
+                      (Route<dynamic> route) => route is HomeScreen);
                 });
               },
             ),

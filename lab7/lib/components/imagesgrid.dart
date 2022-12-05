@@ -1,15 +1,27 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:lab7/components/imagelist.dart';
+import 'package:lab7/components/uploadedimages.dart';
 
-class ImagesGrid extends StatelessWidget {
+class ImagesGrid extends StatefulWidget {
   const ImagesGrid({super.key});
 
+  @override
+  State<ImagesGrid> createState() => _ImagesGridState();
+}
+
+class _ImagesGridState extends State<ImagesGrid> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView.count(
         crossAxisCount: 3,
         children: [
+          
+          for (int x = 0; x < upImages.length; x++)
+            Container(
+              child: Image.file(File(upImages[x])),
+            ),
           for (int i = 0; i < imageList.length; i++)
             Container(
               child: Image.asset(
