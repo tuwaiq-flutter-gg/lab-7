@@ -1,9 +1,16 @@
 # lab7
 
-Using Flutter to create the Instagram design below, you can be creative. Still, you need to stick to the main objects in the image: your app should be able to add post then go back to the main page.
+A new Flutter project.
 
-Note: Name your app lab7
+## Getting Started
 
-A figma file is included
+This project is a starting point for a Flutter application.
 
-<img width="554" alt="Instagram" src="https://user-images.githubusercontent.com/74452750/205493664-6c6e54ed-eac8-4f91-869b-c6c84a1466a0.png">
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
