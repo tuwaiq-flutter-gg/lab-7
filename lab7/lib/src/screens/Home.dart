@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Color.fromRGBO(255, 255, 255, 0),
+      backgroundColor: Color(0xff282626),
       body: SafeArea(
         child: ListView(
           children: [
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
                     width: MediaQuery.of(context).size.width / 3.3,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 201, 196, 196),
+                      color: Colors.white,
                     ),
                     child: Image.asset("images/avatar-icon.png"),
                   ),
@@ -59,6 +59,7 @@ class _HomeState extends State<Home> {
                               constraints: BoxConstraints(),
                               icon: Icon(
                                 Icons.add_circle_outline,
+                                color: Colors.white,
                               ),
                             ),
                           ],
@@ -72,12 +73,18 @@ class _HomeState extends State<Home> {
                                   "80",
                                   style: TextStyle(
                                     fontWeight: FontWeight.w900,
+                                    color: Colors.white,
                                   ),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
-                                const Text("Posts"),
+                                const Text(
+                                  "Posts",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ],
                             ),
                             Column(
@@ -86,12 +93,18 @@ class _HomeState extends State<Home> {
                                   "707k",
                                   style: TextStyle(
                                     fontWeight: FontWeight.w900,
+                                    color: Colors.white,
                                   ),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
-                                const Text("Followers"),
+                                const Text(
+                                  "Followers",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ],
                             ),
                             Column(
@@ -100,12 +113,18 @@ class _HomeState extends State<Home> {
                                   "55",
                                   style: TextStyle(
                                     fontWeight: FontWeight.w900,
+                                    color: Colors.white,
                                   ),
                                 ),
                                 SizedBox(
                                   height: 10,
                                 ),
-                                const Text("following"),
+                                const Text(
+                                  "following",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ],
                             ),
                           ],

@@ -18,7 +18,17 @@ class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Color(0xff282626),
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(255, 255, 255, 0),
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: ListView(
@@ -31,6 +41,7 @@ class _AddPostState extends State<AddPost> {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -39,7 +50,7 @@ class _AddPostState extends State<AddPost> {
               alignment: Alignment.centerLeft,
               child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.white,
                   foregroundColor: Colors.black,
                 ),
                 onPressed: () async {
@@ -63,7 +74,7 @@ class _AddPostState extends State<AddPost> {
             Center(
               child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.white,
                   foregroundColor: Colors.black,
                 ),
                 onPressed: () {

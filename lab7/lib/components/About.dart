@@ -22,11 +22,21 @@ class About extends StatelessWidget {
                   "Web Design Ideas",
                   style: TextStyle(
                     fontWeight: FontWeight.w900,
+                    color: Colors.white,
                   ),
                 ),
                 const Text(
-                    "Our goal is to get YOU inspire All ideas are build from zero"),
-                const Text("Enjoy our posts by like & comment")
+                  "Our goal is to get YOU inspire All ideas are build from zero",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                const Text(
+                  "Enjoy our posts by like & comment",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ],
             ),
           )
