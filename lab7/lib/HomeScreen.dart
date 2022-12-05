@@ -16,8 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgcolor,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: ListView(
+          //crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               height: 30,

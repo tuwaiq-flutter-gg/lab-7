@@ -13,24 +13,26 @@ class ImagesGrid extends StatefulWidget {
 class _ImagesGridState extends State<ImagesGrid> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GridView.count(
-        crossAxisCount: 3,
-        children: [
-          
-          for (int x = 0; x < upImages.length; x++)
-            Container(
-              child: Image.file(File(upImages[x])),
+    return GridView.count(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      crossAxisCount: 3,
+      children: [
+        for (int x = 0; x < upImages.length; x++)
+          Container(
+            child: Image.file(
+              File(upImages[x]),
+              fit: BoxFit.fill,
             ),
-          for (int i = 0; i < imageList.length; i++)
-            Container(
-              child: Image.asset(
-                imageList[i],
-                fit: BoxFit.cover,
-              ),
+          ),
+        for (int i = 0; i < imageList.length; i++)
+          Container(
+            child: Image.asset(
+              imageList[i],
+              fit: BoxFit.cover,
             ),
-        ],
-      ),
+          ),
+      ],
     );
   }
 }
