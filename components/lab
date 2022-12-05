@@ -1,0 +1,42 @@
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:image_picker/image_picker.dart';
+
+class ImageScreen extends StatefulWidget {
+  const ImageScreen({super.key});
+
+  @override
+  State<ImageScreen> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<ImageScreen> {
+  final ImagePicker _picker = ImagePicker();
+  XFile? image;
+  XFile? imageUpdate;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+          child: Column(
+        children: [
+          // image == null ? Text("data") : Image.file(File(image!.path)),
+          image == image ? Image.file(File(image!.path)) : Text("X"),
+          Container(
+            height:45 ,
+            width: 45,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.green,            ),
+          ),
+          //Text(name)
+        ],
+      ),
+    );
+  }
+} 
+
+
+
