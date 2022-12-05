@@ -77,7 +77,7 @@ class _UserProfileState extends State<UserProfile> {
           ),
          
           Expanded(
-            child: GridView.builder(
+            child: GridView.builder (
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: ListOfPic.length,

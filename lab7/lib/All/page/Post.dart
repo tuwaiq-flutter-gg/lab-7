@@ -90,25 +90,29 @@ class _PostState extends State<Post> {
               child: Buttons(
                 ButtonName: "Post It !",
                 OnPressed: () {
-                  image == null
-                      ? showDialog(
-                          context: context,
-                          builder: ((context) => AlertDialog(
-                                insetPadding: EdgeInsets.zero,
-                                content: Text(
-                                  "You did not choose any image",
-                                  style: TextStyle(
-                                    fontSize: 40,
-                                    color: Colors.red,
+                  setState(() {
+                    image == null
+                        ? showDialog(
+                            context: context,
+                            builder: ((context) => AlertDialog(
+                                  insetPadding: EdgeInsets.zero,
+                                  content: Text(
+                                    "You did not choose any image",
+                                    style: TextStyle(
+                                      fontSize: 40,
+                                      color: Colors.red,
+                                    ),
                                   ),
-                                ),
-                              )))
-                      : ListOfPic.add(image!);
-                  Navigator.pop(context);
-                  //  setState(() {});
+                                )))
+                        : ListOfPic.add(image!);
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, "UserProfile");
+
+ 
+                  });
                 },
               ),
-            )
+            ),
           ],
         ));
   }
