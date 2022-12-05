@@ -16,7 +16,7 @@ class uploadImages extends StatefulWidget {
 
 class _uploadImagesState extends State<uploadImages> {
   final ImagePicker _picker = ImagePicker();
-  late XFile image;
+  XFile? image;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +89,7 @@ class _uploadImagesState extends State<uploadImages> {
                   : ClipRRect(
                       borderRadius: BorderRadius.circular(35),
                       child: Image.file(
-                        File(image.path),
+                        File(image!.path),
                         fit: BoxFit.fill,
                       ),
                     ),
